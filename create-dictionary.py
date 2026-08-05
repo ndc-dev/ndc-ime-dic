@@ -5,7 +5,7 @@ import requests
 
 contents = ''
 
-data = requests.get('https://ndc-api-beta.arukascloud.io/ndc9.json').json()
+data = requests.get('https://api-4pccg7v5ma-an.a.run.app/ndc9.json').json()
 
 for (key, value) in data.items():
     if key != '':
@@ -17,7 +17,7 @@ for (key, value) in data.items():
             <ns1:OutputString>%s</ns1:OutputString>
             <ns1:PartOfSpeech>noun</ns1:PartOfSpeech>
             <ns1:CommentData1>[NDC9] %s</ns1:CommentData1>
-            <ns1:URL>https://ndc-api-beta.arukascloud.io/ndc9/%s</ns1:URL>
+            <ns1:URL>https://api-4pccg7v5ma-an.a.run.app/ndc9/%s</ns1:URL>
             <ns1:Priority>150</ns1:Priority>
             <ns1:ReverseConversion>true</ns1:ReverseConversion>
             <ns1:CommonWord>false</ns1:CommonWord>
