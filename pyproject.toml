@@ -7,3 +7,10 @@ requires-python = ">=3.14"
 dependencies = [
     "requests>=2.34.2",
 ]
+
+# ruff で掃除した範囲を固定する。target-version は requires-python から推論される。
+# E / W / F / I などへの拡張は指摘数を量ってから別途入れる
+[tool.ruff.lint]
+select = ["UP"]
+# UP031（% 書式）は自動修正が unsafe で 2 件残っている。別タスクで扱う
+ignore = ["UP031"]
