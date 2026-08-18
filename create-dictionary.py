@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import requests
 
@@ -25,7 +24,7 @@ for (key, value) in data.items():
                 """ % (key, key + ' ' + value['label@ja'], "\n".join(value['note@ja']) if value['note@ja'] else '', key)
         )
 
-with open('ndc9.dctx', 'wt', encoding='utf-8') as f:
+with open('ndc9.dctx', 'w', encoding='utf-8') as f:
     f.write("""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns1:Dictionary xmlns:ns1="http://www.microsoft.com/ime/dctx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ns1:DictionaryHeader>
